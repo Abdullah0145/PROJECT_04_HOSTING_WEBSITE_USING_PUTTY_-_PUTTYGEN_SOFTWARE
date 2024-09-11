@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-04-Hosting Website using PuTTY and PuTTYgen Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>::Project_04_Hosting Website on Cloud Server using PuTTY (PuTTY Configuration) and PuTTYgen (PuTTY Key Generator) Software::</h1>
+    <p>Step 1:first <mark>"login/sign In to the Console"</mark> with <span>"Root User"</span> on <span id="id1">"AWS Management Console"</span>.</p>
+    <img src="./Project_04 Images/Screenshot(01).png" width="1000px" height="450px">
+    <p>Step 2: Give the <mark>"Email address:(mdabdullahsheikh880@gmail.com)"</mark> in the <span>"Root User"</span> on <span id="id1">"AWS Management Console"</span>.</p>
+    <img src="./Project_04 Images/Screenshot(02).png" width="1000px" height="450px">
+    <p>Step 3:Give the <mark>"Password:(Abdullah@-***)"</mark> in the <span>"Root User"</span> on <span id="id1">"AWS Management console"</span>.</p>
+    <img src="./Project_04 Images/Screenshot(03).png" width="1000px" height="450px">
+    <p>Step 4:Search on the Search box <span>"EC2 Service"</span> and after go to the inside <mark>"EC2 Service"</mark>.</p>
+    <img src="./Project_04 Images/Screenshot(04).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(05).png" width="1000px" height="450px">
+    <h4>::01 Launch Instances::</h4>
+    <p>Step 5:In left side corner given <span>"Instances"</span> and click on that <mark>"Instances"</mark> and after In right side corner upper-side given <span id="id1">"Launch Instances"</span> and after go and click on that <mark>"Launch Instances"</mark>.</p>
+    <img src="./Project_04 Images/Screenshot(06).png" width="1000px" height="450px">
+    <p>Step 6:Inside <span>"Launch an Instance"</span> given <span id="id1">"Name and tags"</span> you can give the <mark>"Name:WebServer01"</mark> [It is upto you whatever you want to give any name inside "Name and tags", you can give any name].</p>
+    <img src="./Project_04 Images/Screenshot(07).png" width="1000px" height="450px">
+    <p>Step 7:Inside <span>"Launch an Instance"</span> in <span id="id1">"Application and OS Images (Amazon Machine Image{AMI})"</span> given <span id="id2">"Quick Start"</span> you can select anyone <span id="id3">"AMI" from the "Quick Start" for Example:"Amazon linux", or "MacOS", or "Ubuntu", or "Windows", RedHat, etc...</span>(Whatever you want, you can select anyone as your preference "AMI")But Now I can select one "AMI" from the <mark>"Quick Start:Amazon-linux"</mark>, after you can keep in default something.</p>
+    <img src="./Project_04 Images/Screenshot(08).png" width="1000px" height="450px">
+    <p>Step 8:Inside <span>"Launch an Instance"</span> given <span id="id1">"Instance type"</span> you can select on that <mark>"Instance type:t2.micro"</mark>.</p>
+    <img src="./Project_04 Images/Screenshot(09).png" width="1000px" height="450px">
+    <p>Step 9: Inside <span>"Launch an Instance"</span> given <span id="id1">"key pair(login)"</span> you can select anyone <mark>"Key pair name:mine_key"</mark>.</p>
+    <img src="./Project_04 Images/Screenshot(10).png" width="1000px" height="450px">
+    <p>OR, if you don't have <span>"key pair name"</span> you can <span id="id1">"Create new key pair"</span> after you can click on that <mark>"Create new key pair"</mark> and after inside <span id="id2">"Create key pair"</span> you can give any key pair name <mark>"Key pair name:winserver-2pm"</mark> after you can select <mark>"Key pair type:RSA"</mark> and after you can also select <mark>"Private file format:(.pem)"</mark>(for use with OpenSSH{for Gitbash, Amazon linux})" after you can click on that <mark>"Create Key pair"</mark>, finally your's Key Create Successfully.</p>
+    <img src="./Project_04 Images/Screenshot(11).png" width="1000px" height="450px">
+    <p>Step 10:Inside <span>"Launch an Instance"</span> given <span id="id1">"Network Settings"</span> click on <mark>"Edit"</mark> button.</p>
+    <img src="./Project_04 Images/Screenshot(12).png" width="1000px" height="450px">
+    <p>Step 11: In "Network settings" and after select default "VPC:vpc0d03551655320d***", and select "Subnet:No preference"(Here i am not given any preference zone), and "Auto-assign Public IP:Enable", select on that "Create security group" and you can give the name of "Security group name:winserver-sec-2pm" and you can give same "Description:winserver-sec-2pm", In "Inbound security group rules" give the permission "type:ssh, "Protcol:TCP", Port range:22, "Source type:Anywhere", "Source(0.0.0.0/0)" "Description: Securly connecting Host Server(Linux and Ubuntu Server)" and after go and click on that "Add security group rule" and also Allow "type:HTTP, "Protcol:TCP", Port range:80, "HTTP:80", "Source type:AnyWhere(0.0.0.0/0)", you can select "Source:0.0.0.0/0" and you can type on "description:for Web Hosting" and after go and click on that "Add security group rule" and also Allow "type:HTTPS, "Protcol:TCP", Port range:443, "Source type:Anywhere", "Source(0.0.0.0/0)" "Description:Security for Web Hosting" and after you can keep in default everything and after click on that "Launch Instance".</p>
+    <img src="./Project_04 Images/Screenshot(13).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(14).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(15).png" width="1000px" height="450px">
+    <p>Step 12: After that you will get notification message, Saying that you have to Successfully "Launch Instances", After click on that "View all Instances" In below given dashboard Image.</p>
+    <img src="./Project_04 Images/Screenshot(16).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(17).png" width="1000px" height="450px">
+    <p>Step 13:After Select the "Checkbox:WebServer01", after go and click on that "Connect" and after go and click on that "SSH Client" Here Question is? But this time, let us say I have "Git bash", but "Git bash is not working that time, So how to connect? So I don't have (.ppk) file. if you are using putty as a client, but putty does not understand (.pem) file, So What should we do? Here we are going to inside puttygen and also convert (.pem) file to (.ppk) file using puttygen.</p>
+    <p>Step 14:first Check In your system Do you have Putty and Puttygen or not? you have Putty and Puttygen you have work on it's. but you don't have Putty and Puttygen, you are doing Download and Installation Putty and Puttygen in your system.</p>  
+    <p>Step 15: Open the "Google Chrome" In "Google chrome Search on the Search box:Putty Download", Click on that "First link" "Download Putty a free SSH and Telnet client for Windows". after go and click on that <a href="https://www.putty.org/">Download Putty</a></p>
+    <img src="./Project_04 Images/Screenshot(18).png" width="1000px" height="450px">
+    <p>Step 16:After go and click on that "Download Putty".</p>
+    <img src="./Project_04 Images/Screenshot(19).png" width="1000px" height="450px">
+    <p>Step 17:Inside "Download Putty" In "Alternative binary files" and also go and click on that "Putty.exe" finally Download "Putty.exe"(for putty.exe (the SSH and Telnet client itself)).</p>
+    <img src="./Project_04 Images/Screenshot(20).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(21).png" width="1000px" height="450px">
+    <p>Step 18:Again Inside "Download Putty" In "Alternative binary files" and also go and click on that "Puttygen.exe" finally Download "Puttygen.exe"(for puttygen.exe (a RSA and DSA key generation utility)).</p>
+    <img src="./Project_04 Images/Screenshot(22).png" width="1000px" height="450px">
+    <p>Step 19:First Open the "Puttygen(Putty Key Generator)" in Windows" Now I want to convert (.pem) file to in (.ppk) file, So I can use with "Putty Key generator" go and click on that "Load".</p>
+    <img src="./Project_04 Images/Screenshot(23).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(24).png" width="1000px" height="450px">
+    <p>Step 20:After go to your actual folder Where is your (.pem) file, Select on that "(.pem) file: mine_key.pem" (It means Private Key file), after go and Select on that "All files (","), and after click on that "Open".</p>
+    <img src="./Project_04 Images/Screenshot(25).png" width="1000px" height="450px">
+    <p>Step 21:After go and click on that "OK".</p>
+    <img src="./Project_04 Images/Screenshot(26).png" width="1000px" height="250px">
+    <p>Step 22:Inside "Puttygen(Putty key Generator)" keep in default "RSA" but don't use anythings, after go and click on that "Save Private Key".</p>
+    <img src="./Project_04 Images/Screenshot(27).png" width="1000px" height="450px">
+    <p>Step 23:After go and click on that "Yes"</p>
+    <img src="./Project_04 Images/Screenshot(28).png" width="1000px" height="250px">
+    <p>Step 24:After you can give actual "Private key name: mine_key" just remove(.pem) file extension, after go and click onn that "Save", finally Save Private Key(.pem) file convert in (.ppk) file in the "puttygen".</p>
+    <img src="./Project_04 Images/Screenshot(29).png" width="1000px" height="450px">
+    <p>Step 25:After go and click on that Close(X) button "Puttygen(Putty Key Generator)"</p>
+    <img src="./Project_04 Images/Screenshot(30).png" width="1000px" height="450px">
+    <p>Step 26:Now I want to open the "Putty Configuration", What is required in "Putty Configuration" "Host name for IP address", First you can go to the AWS in Instance:(WebServer01) inside EC2 Service, after you can go and Check the Checkbox of WebSerever01, and after go and click on that "Connect".</p>
+    <img src="./Project_04 Images/Screenshot(31).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(32).png" width="1000px" height="450px">
+    <p>Step 27:After Inside "Connect to Instance" go and click on that "SSH Client", after go and Copy "Connect to your instance using its Public DNS: ec2-13-126-105-114.ap-south-1.compute.amazonaws.com"</p>
+    <img src="./Project_04 Images/Screenshot(33).png" width="1000px" height="450px">
+    <p>Step 28:After Paste "Connect to your instance using its Public DNS:ec2-13-126-105-114.ap-south-1.compute.amazonaws.com" Inside "Putty Configuration", Inside "Putty Configuration" after you can select the inside Category: first select SSH and after select Auth and after select Credentials, after you can give your Private Key file for authentication: after click on that "Browser", and After you can go actual Folder Where is your private key. you can select that Private key(mine_key), after click on that "Open".</p>
+    <img src="./Project_04 Images/Screenshot(34).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(35).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(36).png" width="1000px" height="450px">
+    <p>Step 29:After go and click on that "Open".</p>
+    <img src="./Project_04 Images/Screenshot(37).png" width="1000px" height="450px">
+    <p>Step 30:After go and click on that "Accept".</p>
+    <img src="./Project_04 Images/Screenshot(38).png" width="1000px" height="450px">
+    <p>Step 31:Now here is asking your username, you can write your "user name:ec2-user(This is your System name)", after click on that "Enter" button. Finally, Successfully I am Connecting with Putty and Puttygen. Successfully Convert (.pem) file in (.ppk) file.</p>
+    <img src="./Project_04 Images/Screenshot(39).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(40).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(41).png" width="1000px" height="250px">
+    <img src="./Project_04 Images/Screenshot(42).png" width="1000px" height="450px">
+    <img src="./Project_04 Images/Screenshot(43).png" width="1000px" height="450px">
+</body>
+</html>
